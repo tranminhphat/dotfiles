@@ -1,0 +1,82 @@
+{
+  /* VSCode settings */
+  // Workbench
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.enablePreview": false,
+  // Editor
+  "editor.formatOnPaste": true,
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "'Hack', Consolas, 'Courier New', monospace",
+  "editor.lineHeight": 24,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,  
+  // Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  
+  // Hidden files/folders
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+  },
+  
+  // Terminal 
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+  // Extensions
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "extensions.ignoreRecommendations": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "git.enableSmartCommit": true,
+
+  /********************************************/
+  
+  /* Vim Settings */
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "editor.lineNumbers": "relative",
+  "vim.searchHighlightColor": "#ff79c6",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<esc>"
+      ]
+    }
+  ],
+  /********************************************/
+
+  /* Languages settings */
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.tsserver.useSeparateSyntaxServer": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "css.lint.unknownAtRules": "ignore",
+  /********************************************/
+}
