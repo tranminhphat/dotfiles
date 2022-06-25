@@ -190,5 +190,13 @@
     "key": "down",
     "command": "-list.focusDown",
     "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+cmd+p",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+cmd+n",
+    "command": "workbench.action.nextEditor"
   }
 ]
