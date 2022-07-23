@@ -3,10 +3,11 @@ let mapleader = ","
 
 " Colorscheme
 syntax on
+set background=dark
 autocmd vimenter * ++nested colorscheme gruvbox
 
+" Set commands
 " Load vim-sensible plugin earlier so that we can override them in below
-" " See https://github.com/tpope/vim-sensible#faq
 runtime! plugin/sensible.vim
 
 set noerrorbells
@@ -30,6 +31,8 @@ set ruler
 set number
 set backspace=indent,eol,start
 set cursorline
+set nocompatible
+set showcmd
 
 " Map escape to jk
 :imap jk <Esc>
@@ -40,16 +43,17 @@ map <C-h> :nohl<CR>
 " Tabs
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
-nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+
+" Buffers
+nmap <S-Tab> :bp<Return>
+nmap <Tab> :bn<Return>
 
 " Windows
-
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 " Navigate between window
-nmap <Space> <C-w>w
+map <Space> <C-w>w
 map s<left> <C-w>h
 map s<up> <C-w>k
 map s<down> <C-w>j
@@ -64,18 +68,22 @@ nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
 
+" NERDtree
 " How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Toggle nerdtree
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <leader>n :NERDTreeMirror<CR>:NERDTreeFocus<CR>
+nnoremap <C-o> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__', 'node_modules']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:NERDTreeShowBookmarks=1
 
+" Airline
 let g:airline#extensions#tabline#enabled = 1
+
+" fzf
+noremap ` :Files<CR>
+noremap ; :Buffers<CR>
+let g:fzf_layout = { 'down': '~40%' }
 
 " Plugin
 call plug#begin()
@@ -92,4 +100,6 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-sensible'
 Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
