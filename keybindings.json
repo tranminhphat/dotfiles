@@ -1,74 +1,17 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
-    "key": "shift+alt+k",
-    "command": "keybindings.editor.recordSearchKeys",
-    "when": "inKeybindings && inKeybindingsSearch"
-  },
+    "key": "ctrl+cmd+h",
+    "command": "workbench.action.navigateLeft"
+ },
   {
-    "key": "alt+k",
-    "command": "-keybindings.editor.recordSearchKeys",
-    "when": "inKeybindings && inKeybindingsSearch"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+up",
-    "command": "-editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+down",
-    "command": "-editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "key": "ctrl+cmd+l",
+    "command": "workbench.action.navigateRight"
   },
   {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "f2",
-    "command": "-renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "delete",
-    "command": "deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "delete",
-    "command": "-deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "delete",
-    "command": "extension.vim_delete",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "key": "delete",
-    "command": "-extension.vim_delete",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "key": "d",
-    "command": "moveFileToTrash",
-    "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "delete",
-    "command": "-moveFileToTrash",
-    "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "n",
@@ -81,122 +24,40 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "ctrl+tab",
-    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    "key": "cmd+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+tab",
-    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    "key": "cmd+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft"
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.navigateRight"
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+tab",
-    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-    "when": "inEditorsPicker && inQuickOpen"
+    "key": "ctrl+cmd+b",
+    "command": "bookmarksExplorer.focus"
   },
   {
-    "key": "ctrl+tab",
-    "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
-    "when": "inEditorsPicker && inQuickOpen"
-  },
-  {
-    "key": "ctrl+pagedown",
-    "command": "extension.vim_ctrl+pagedown",
-    "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+pagedown",
-    "command": "-extension.vim_ctrl+pagedown",
-    "when": "editorTextFocus && vim.active && vim.use<C-pagedown> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+shift+k",
-    "command": "editor.action.showDefinitionPreviewHover",
+    "key": "ctrl+cmd+.",
+    "command": "bookmarks.toggle",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+h",
-    "command": "editor.action.startFindReplaceAction",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "-editor.action.startFindReplaceAction"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.navigateDown"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.navigateUp"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "-workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.action.terminal.newInActiveWorkspace",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "j",
-    "command": "-list.focusDown",
-    "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "down",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "down",
-    "command": "-selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "up",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "up",
-    "command": "-selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "j",
-    "command": "list.focusDown",
-    "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "down",
-    "command": "-list.focusDown",
-    "when": "listFocus && !inputFocus"
+    "key": "ctrl+cmd+n",
+    "command": "workbench.action.nextEditor"
   },
   {
     "key": "ctrl+cmd+p",
     "command": "workbench.action.previousEditor"
   },
-  {
-    "key": "ctrl+cmd+n",
-    "command": "workbench.action.nextEditor"
-  }
 ]
