@@ -6,6 +6,7 @@ syntax on
 set background=dark
 autocmd vimenter * ++nested colorscheme gruvbox
 
+
 " Set commands
 " Load vim-sensible plugin earlier so that we can override them in below
 runtime! plugin/sensible.vim
@@ -33,6 +34,7 @@ set backspace=indent,eol,start
 set cursorline
 set nocompatible
 set showcmd
+set hidden
 
 " Map escape to jk
 :imap jk <Esc>
@@ -50,18 +52,13 @@ nmap <Tab> :bn<Return>
 
 " Windows
 " Split window
-nmap ss :split<Return><C-w>w
-nmap sv :vsplit<Return><C-w>w
+nmap <leader>ss :split<Return><C-w>w
+nmap <leader>sv :vsplit<Return><C-w>w
 " Navigate between window
-map <Space> <C-w>w
-map s<left> <C-w>h
-map s<up> <C-w>k
-map s<down> <C-w>j
-map s<right> <C-w>l
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
+map <leader>sh <C-w>h
+map <leader>sk <C-w>k
+map <leader>sj <C-w>j
+map <leader>sl <C-w>l
 " Resize window
 nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
