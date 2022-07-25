@@ -11,8 +11,8 @@
 	"editor.guides.indentation": false,
 	"editor.matchBrackets": "never",
 	"editor.lineNumbers": "on",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs":"active",
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs":"active",
 	"editor.minimap.enabled": false,
 	"editor.fontSize": 14,
 	"editor.fontFamily": "Noto Sans Mono, Menlo, Monaco, 'Courier New', monospace",
@@ -24,7 +24,7 @@
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSmoothCaretAnimation": true,
 	"editor.codeActionsOnSave": {
-	  "source.organizeImports": true
+	    "source.organizeImports": true
 	},
 	// Explorer
 	"explorer.confirmDelete": false,
@@ -39,18 +39,18 @@
 
 	// Hidden files/folders
 	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/node_modules": true
+	    "**/.git": true,
+	    "**/.svn": true,
+	    "**/.hg": true,
+	    "**/CVS": true,
+	    "**/.DS_Store": true,
+	    "**/node_modules": true
 	},
 
 	// Extensions
 	"gitlens.advanced.messages": {
-		"suppressGitMissingWarning": true,
-		"suppressLineUncommittedWarning": true
+	    "suppressGitMissingWarning": true,
+	    "suppressLineUncommittedWarning": true
 	},
 	"extensions.ignoreRecommendations": true,
 	"git.enableSmartCommit": true,
@@ -65,8 +65,8 @@
 	"vim.vimrc.path": "/Users/phattran/.vimrc",
 	"vim.leader": ",",
 	"vim.insertModeKeyBindings": [{
-				"before": ["j", "k"],
-				"after": ["<esc>"]
+	    "before": ["j", "k"],
+	    "after": ["<esc>"]
 	}],
 	"tabnine.experimentalAutoImports": true,
 	"prettier.semi": false,
@@ -77,7 +77,7 @@
 
 	/* Languages settings */
 	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	    "editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"javascript.validate.enable": false,
 	"css.lint.unknownAtRules": "ignore",
