@@ -6,7 +6,6 @@ syntax on
 set background=dark
 autocmd vimenter * ++nested colorscheme gruvbox
 
-
 " Set commands
 " Load vim-sensible plugin earlier so that we can override them in below
 runtime! plugin/sensible.vim
@@ -83,8 +82,23 @@ let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycach
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
+" Lightline
+set noshowmode
+let g:lightline = {
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'readonly', 'filename', 'modified' ] ],
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'percent' ],
+    \              [ 'fileencoding', 'filetype' ] ],
+    \ },
+    \ 'component_function': {
+    \   'filename': 'LightlineFilename'
+    \ },
+    \ }
+function! LightlineFilename()
+  return expand('%:t') !=# '' ? @% : '[No Name]'
+endfunction
 
 " fzf
 noremap ` :Files<CR>
@@ -97,16 +111,16 @@ call plug#begin()
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'justinmk/vim-sneak'
-Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-indent'
-Plug 'vim-airline/vim-airline'
+Plug 'justinmk/vim-sneak'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-sensible'
-Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
