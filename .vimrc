@@ -36,12 +36,20 @@ set showcmd
 set hidden
 set nocompatible
 set pastetoggle=<F3>
+set mouse=a
 
 " Map escape to jk
 :imap jk <Esc>
 
 " Remove highlight
 map <C-h> :nohl<CR>
+
+" Mappings for moving lines and preserving indentation
+" " http://vim.wikia.com/wiki/Moving_lines_up_or_down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Tabs
 map <leader>tn :tabnew<cr>
