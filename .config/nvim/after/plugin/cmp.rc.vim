@@ -100,4 +100,7 @@ lua <<EOF
   require('lspconfig')['bashls'].setup {
     capabilities = capabilities
   }
+  require'lspconfig'.rust_analyzer.setup{
+    capabilities = capabilities
+  }
 EOF
