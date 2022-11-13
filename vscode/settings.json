@@ -3,6 +3,7 @@
 	"workbench.sideBar.location": "right",
 	"workbench.activityBar.visible": false,
 	"workbench.startupEditor": "none",
+	"workbench.colorTheme": "Gruvbox Minor Dark Hard",
 	// Editor
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
@@ -11,21 +12,22 @@
 	"editor.guides.indentation": false,
 	"editor.matchBrackets": "never",
 	"editor.lineNumbers": "on",
-        "editor.bracketPairColorization.enabled": true,
-        "editor.guides.bracketPairs":"active",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs":"active",
 	"editor.minimap.enabled": false,
+	"editor.fontFamily": "NotoSansMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
 	"editor.fontSize": 14,
-	"editor.fontFamily": "Noto Sans Mono, Menlo, Monaco, 'Courier New', monospace",
-	"editor.lineHeight": 24,
+	"editor.lineHeight": 22,
 	"editor.tabSize": 2,
 	"editor.cursorStyle": "line",
 	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
 	"editor.wordWrap": "off",
-	"editor.cursorBlinking": "phase",
+	"editor.cursorBlinking": "smooth",
 	"editor.cursorSmoothCaretAnimation": true,
 	"editor.codeActionsOnSave": {
-	    "source.organizeImports": true
+		"source.organizeImports": true
 	},
+	"editor.tabCompletion": "on",
 	// Explorer
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
@@ -34,23 +36,23 @@
 	// Terminal
 	"terminal.integrated.fontSize": 14,
 	"terminal.integrated.fontFamily": "Noto Sans Mono",
-	"terminal.integrated.defaultProfile.osx": "fish",
+	"terminal.integrated.defaultProfile.osx": "fish (2)",
 	"terminal.integrated.tabs.location": "left",
 
 	// Hidden files/folders
 	"files.exclude": {
-	    "**/.git": true,
-	    "**/.svn": true,
-	    "**/.hg": true,
-	    "**/CVS": true,
-	    "**/.DS_Store": true,
-	    "**/node_modules": true
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/node_modules": true
 	},
 
 	// Extensions
 	"gitlens.advanced.messages": {
-	    "suppressGitMissingWarning": true,
-	    "suppressLineUncommittedWarning": true
+		"suppressGitMissingWarning": true,
+		"suppressLineUncommittedWarning": true
 	},
 	"extensions.ignoreRecommendations": true,
 	"git.enableSmartCommit": true,
@@ -65,9 +67,12 @@
 	"vim.vimrc.path": "/Users/phattran/.vimrc",
 	"vim.leader": ",",
 	"vim.insertModeKeyBindings": [{
-	    "before": ["j", "k"],
-	    "after": ["<esc>"]
+				"before": ["j", "k"],
+				"after": ["<esc>"]
 	}],
+	"vim.scroll": 15,
+	"vim.sneak": true,
+	"vim.targets.enable": true,
 	"tabnine.experimentalAutoImports": true,
 	"prettier.semi": false,
 	"prettier.singleQuote": true,
@@ -77,7 +82,8 @@
 
 	/* Languages settings */
 	"[typescript]": {
-	    "editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"typescript.preferences.importModuleSpecifier": "relative"
 	},
 	"javascript.validate.enable": false,
 	"css.lint.unknownAtRules": "ignore",
@@ -86,8 +92,4 @@
 	/* Others */
 	"files.trimTrailingWhitespace": true,
 	"diffEditor.ignoreTrimWhitespace": false,
-	"vim.scroll": 15,
-	"vim.sneak": true,
-	"vim.targets.enable": true,
-	"workbench.colorTheme": "Gruvbox Dark Hard",
 }
