@@ -3,10 +3,15 @@
 	"workbench.sideBar.location": "right",
 	"workbench.activityBar.visible": false,
 	"workbench.startupEditor": "none",
-	"workbench.colorTheme": "Gruvbox Minor Dark Hard",
+	"workbench.colorTheme": "Oceanic Next (dimmed bg)",
+	"workbench.colorCustomizations": {
+    "statusBar.background" : "#333333",
+    "statusBar.noFolderBackground" : "#212121",
+    "statusBar.debuggingBackground": "#263238"
+	},
 	// Editor
-	"editor.formatOnPaste": true,
-	"editor.formatOnSave": true,
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": false,
 	"editor.inlineSuggest.enabled": true,
 	"editor.guides.highlightActiveIndentation": false,
 	"editor.guides.indentation": false,
@@ -24,14 +29,18 @@
 	"editor.wordWrap": "off",
 	"editor.cursorBlinking": "smooth",
 	"editor.cursorSmoothCaretAnimation": true,
-	"editor.codeActionsOnSave": {
-		"source.organizeImports": true
-	},
+	// "editor.codeActionsOnSave": {
+	// 	"source.organizeImports": true
+	// },
 	"editor.tabCompletion": "on",
+  "editor.scrollbar.horizontal": "hidden",
+	"editor.accessibilitySupport": "off",
+	"editor.renderLineHighlight": "none",
+	"editor.overviewRulerBorder": false,
 	// Explorer
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
-	"editor.accessibilitySupport": "off",
+
 
 	// Terminal
 	"terminal.integrated.fontSize": 14,
@@ -69,9 +78,10 @@
 	"vim.insertModeKeyBindings": [{
 				"before": ["j", "k"],
 				"after": ["<esc>"]
-	}],
-	"vim.scroll": 15,
+	}
+],
 	"vim.sneak": true,
+	"vim.sneakReplacesF": true,
 	"vim.targets.enable": true,
 	"tabnine.experimentalAutoImports": true,
 	"prettier.semi": false,
