@@ -37,6 +37,9 @@
 	"editor.accessibilitySupport": "off",
 	"editor.renderLineHighlight": "none",
 	"editor.overviewRulerBorder": false,
+  "editor.tokenColorCustomizations": {
+    "comments": "#8A9EA1"
+  },
 	// Explorer
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
