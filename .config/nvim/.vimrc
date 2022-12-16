@@ -16,8 +16,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" GUI enhancements
 
+" GUI enhancements
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -39,18 +39,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0'  }
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 call plug#end()
-
-" Colorscheme
-syntax on
-set background=dark
-set termguicolors
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-gruvbox-dark-hard
-" Customize the highlight a bit.
-" Make comments more prominent -- they are important.
-call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
-" Make it clearly visible which argument we're at.
-call Base16hi("LspSignatureActiveParameter", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold", "")
 
 " Set commands
 " Load vim-sensible plugin earlier so that we can override them in below
@@ -113,4 +101,37 @@ nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
+
+" Colorscheme
+syntax on
+set background=dark
+set termguicolors
+let base16colorspace=256  " Access colors present in 256 colorspace
+
+" Random color schemes!
+function RandomColorScheme()
+  let mycolors = split(globpath(&rtp,"**/colors/*.vim"),"\n")
+  exe 'so ' . mycolors[localtime() % len(mycolors)]
+  unlet mycolors
+endfunction
+:command NewColor call RandomColorScheme()
+
+function RandomBase16()
+  let mycolors = split(globpath(&rtp,"**/colors/base16*.vim"),"\n")
+  exe 'so ' . mycolors[localtime() % len(mycolors)]
+  unlet mycolors
+endfunction
+
+:command C call RandomBase16()
+nnoremap ,, :C<CR>:colorscheme<CR>
+" Start new windows with a random color scheme
+call RandomBase16()
+
+" colorscheme base16-gruvbox-dark-hard
+
+" Customize the highlight a bit.
+" Make comments more prominent -- they are important.
+call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
+" Make it clearly visible which argument we're at.
+call Base16hi("LspSignatureActiveParameter", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold", "")
 
