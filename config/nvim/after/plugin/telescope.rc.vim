@@ -6,6 +6,7 @@ nnoremap <leader>h <cmd>Telescope help_tags<cr>
 nnoremap <leader>e <cmd>Telescope diagnostics<cr>
 nnoremap <leader>r <cmd>Telescope registers<cr>
 nnoremap <C-o> <cmd>Telescope file_browser<cr>
+nnoremap <C-g> <cmd>Telescope grep_string<cr>
 
 lua << EOF
 local fb_actions = require('telescope').extensions.file_browser.actions
