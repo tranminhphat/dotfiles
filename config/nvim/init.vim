@@ -21,6 +21,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 
 " Syntactic language support
 Plug 'rust-lang/rust.vim'
@@ -37,7 +38,6 @@ Plug 'hrsh7th/nvim-cmp'
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0'  }
-Plug 'nvim-telescope/telescope-file-browser.nvim'
 call plug#end()
 
 " Set commands
