@@ -1,3 +1,4 @@
+ " Map the <LEADER> key to ,
 let mapleader = ","
 
 " Plugin
@@ -15,11 +16,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'nvim-tree/nvim-tree.lua'
 call plug#end()
 
 " Set commands
@@ -27,10 +25,10 @@ call plug#end()
 runtime! plugin/sensible.vim
 set noerrorbells
 set nowrap
-set smartcase
-set noswapfile
 set nobackup
+set noswapfile
 set undofile
+set smartcase
 set incsearch
 set hlsearch
 set tabstop=2
@@ -50,6 +48,7 @@ set nocompatible
 set pastetoggle=<F3>
 set mouse=a
 set showcmd
+set noshowmode
 
 " Map escape to jk
 :imap jk <Esc>
@@ -83,32 +82,21 @@ nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
 
-" Colorscheme
+" File explorer
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
+let g:netrw_browse_split = 4
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
+
+" GUI enhancements
 syntax on
 set background=dark
 set termguicolors
 let base16colorspace=256  " Access colors present in 256 colorspace
-
-" Random color schemes!
-function RandomColorScheme()
-  let mycolors = split(globpath(&rtp,"**/colors/*.vim"),"\n")
-  exe 'so ' . mycolors[localtime() % len(mycolors)]
-  unlet mycolors
-endfunction
-:command NewColor call RandomColorScheme()
-
-function RandomBase16()
-  let mycolors = split(globpath(&rtp,"**/colors/base16*.vim"),"\n")
-  exe 'so ' . mycolors[localtime() % len(mycolors)]
-  unlet mycolors
-endfunction
-
-:command C call RandomBase16()
-nnoremap ,, :C<CR>:colorscheme<CR>
-
 colorscheme base16-gruvbox-dark-hard
-" Customize the highlight a bit.
-" Make comments more prominent -- they are important.
-call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "")
-" Make it clearly visible which argument we're at.
-call Base16hi("LspSignatureActiveParameter", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold", "")
+hi CursorLineNr cterm=NONE
+call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "") " Make comments more prominent -- they are important.
