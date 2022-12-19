@@ -1,6 +1,3 @@
-nnoremap <leader>to :NvimTreeToggle<cr> 
-nnoremap <leader>tf :NvimTreeFocus<cr> 
-
 lua << EOF
 -- examples for your init.lua
 
@@ -18,8 +15,8 @@ require("nvim-tree").setup()
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
-    adaptive_size = true,
     side = "right",
+    adaptive_size = true,
     mappings = {
       list = {
         { key = "u", action = "dir_up" },

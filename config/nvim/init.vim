@@ -16,28 +16,10 @@ Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" GUI enhancements
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'kyazdani42/nvim-web-devicons'
-
-" Syntactic language support
-Plug 'rust-lang/rust.vim'
-
-" LSP config
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/nvim-cmp'
-
-" Telescope
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0'  }
-Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-tree/nvim-tree.lua'
 call plug#end()
 
 " Set commands
@@ -48,7 +30,6 @@ set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set hlsearch
