@@ -16,13 +16,16 @@ Plug 'justinmk/vim-sneak'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " Set commands
 " Load vim-sensible plugin earlier so that we can override them in below
 runtime! plugin/sensible.vim
+syntax on
+set background=dark
+hi CursorLine cterm=NONE
+hi CursorLineNr cterm=NONE
 set noerrorbells
 set nowrap
 set nobackup
@@ -91,12 +94,3 @@ augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Vexplore
 augroup END
-
-" GUI enhancements
-syntax on
-set background=dark
-set termguicolors
-let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-gruvbox-dark-hard
-hi CursorLineNr cterm=NONE
-call Base16hi("Comment", g:base16_gui09, "", g:base16_cterm09, "", "", "") " Make comments more prominent -- they are important.
