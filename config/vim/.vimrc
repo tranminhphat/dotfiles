@@ -24,8 +24,6 @@ call plug#end()
 runtime! plugin/sensible.vim
 syntax on
 set background=dark
-hi CursorLine cterm=NONE
-hi CursorLineNr cterm=NONE
 set noerrorbells
 set nowrap
 set nobackup
@@ -52,6 +50,8 @@ set pastetoggle=<F3>
 set mouse=a
 set showcmd
 set noshowmode
+hi CursorLine cterm=NONE
+hi CursorLineNr cterm=NONE
 
 " Map escape to jk
 :imap jk <Esc>
