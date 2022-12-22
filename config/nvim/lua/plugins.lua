@@ -18,9 +18,9 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'
   
   -- GUI
-	use 'chriskempson/base16-vim'
-	use 'itchyny/lightline.vim'
-	use 'kyazdani42/nvim-web-devicons'
+  use 'itchyny/lightline.vim'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'chriskempson/base16-vim'
   -- Vim enhancements
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'

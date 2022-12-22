@@ -1,7 +1,7 @@
 local set = vim.opt
 local base16colorspace = 256
-vim.cmd.colorscheme('base16-gruvbox-dark-hard')
 set.termguicolors = true
+vim.cmd("colorscheme base16-gruvbox-dark-hard")
 
 vim.cmd "set noshowmode"
 vim.cmd "set showcmd"
@@ -35,4 +35,3 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',
   command = "set nopaste"
 })
-
