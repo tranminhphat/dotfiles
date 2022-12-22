@@ -1,10 +1,12 @@
 local set = vim.opt
-local base16colorspace = 256
-set.termguicolors = true
-vim.cmd("colorscheme base16-gruvbox-dark-hard")
+local cmd = vim.cmd
+cmd('let base16colorspace=256')
+cmd('colorscheme base16-gruvbox-dark-hard')
+cmd("syntax on")
+cmd("set noshowmode")
+cmd("set showcmd")
 
-vim.cmd "set noshowmode"
-vim.cmd "set showcmd"
+set.termguicolors = true
 
 set.number = true
 set.relativenumber = true

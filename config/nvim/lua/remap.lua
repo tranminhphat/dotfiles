@@ -1,5 +1,5 @@
-vim.g.mapleader = " "
 local map = vim.keymap
+vim.g.mapleader = ","
 
 map.set('i' ,'jk', '<Esc>')
 
