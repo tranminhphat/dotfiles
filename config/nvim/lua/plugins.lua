@@ -16,11 +16,11 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind-nvim'
-  
   -- GUI
   use 'itchyny/lightline.vim'
   use 'kyazdani42/nvim-web-devicons'
   use 'chriskempson/base16-vim'
+  use 'tomasiser/vim-code-dark'
   -- Vim enhancements
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
