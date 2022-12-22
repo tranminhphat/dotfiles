@@ -13,6 +13,7 @@ end
 
 # Alias
 alias c='clear'
-alias gsync="git checkout $argv && git fetch upstream && git rebase upstream/$argv && git push"
-alias glog='git log --graph --oneline --decorate --all'
+alias g='git'
 alias vi='nvim'
+alias glog='git log --graph --oneline --decorate --all'
+alias gsync="git checkout $argv && git fetch upstream && git rebase upstream/$argv && git push"

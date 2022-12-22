@@ -6,6 +6,8 @@ return require('packer').startup(function(use)
 	use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
   use 'nvim-telescope/telescope-file-browser.nvim'
   -- LSP config
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -14,6 +16,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind-nvim'
+  
   -- GUI
 	use 'chriskempson/base16-vim'
 	use 'itchyny/lightline.vim'
@@ -32,6 +35,4 @@ return require('packer').startup(function(use)
   use 'vim-scripts/ReplaceWithRegister'
   -- Git
   use 'tpope/vim-fugitive'
-  use { 'lewis6991/gitsigns.nvim',
-  config = function() require('gitsigns').setup() end }
 end)
