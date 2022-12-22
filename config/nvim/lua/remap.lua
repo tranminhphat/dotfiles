@@ -31,3 +31,9 @@ map.set('n', '<C-w><left>', '<C-w><')
 map.set('n', '<C-w><right>', '<C-w>>')
 map.set('n', '<C-w><up>', '<C-w>+')
 map.set('n', '<C-w><down>', '<C-w>-')
+
+-- Keep at center
+map.set('n', "<C-d>", "<C-d>zz")
+map.set('n', "<C-u>", "<C-u>zz")
+map.set('n', "n", "nzzzv")
+map.set('n', "N", "Nzzzv")
