@@ -1,6 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+  -- Fuzzy finder
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
   use 'nvim-telescope/telescope-file-browser.nvim'
@@ -13,8 +14,24 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind-nvim'
-
+  -- GUI
 	use 'chriskempson/base16-vim'
 	use 'itchyny/lightline.vim'
 	use 'kyazdani42/nvim-web-devicons'
+  -- Vim enhancements
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-commentary'
+  use 'kana/vim-textobj-user'
+  use 'kana/vim-textobj-line'
+  use 'kana/vim-textobj-indent'
+  use 'kana/vim-textobj-entire'
+  use 'justinmk/vim-sneak'
+  use 'andymass/vim-matchup'
+  use 'jiangmiao/auto-pairs'
+  use 'vim-scripts/ReplaceWithRegister'
+  -- Git
+  use 'tpope/vim-fugitive'
+  use { 'lewis6991/gitsigns.nvim',
+  config = function() require('gitsigns').setup() end }
 end)
