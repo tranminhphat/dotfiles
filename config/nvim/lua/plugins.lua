@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   -- GUI
   use 'itchyny/lightline.vim'
   use 'kyazdani42/nvim-web-devicons'
+  use 'nvim-tree/nvim-tree.lua'
   use 'chriskempson/base16-vim'
   use 'tomasiser/vim-code-dark'
   -- Vim enhancements
