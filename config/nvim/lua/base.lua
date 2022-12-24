@@ -32,6 +32,11 @@ set.pastetoggle= "<F3>"
 set.showcmd = true
 set.cursorline = true
 
+vim.cmd [[
+  hi CursorLineNR cterm=bold
+]]
+
+
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',
