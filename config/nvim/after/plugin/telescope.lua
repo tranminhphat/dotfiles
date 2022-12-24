@@ -31,7 +31,6 @@ require("telescope").load_extension "file_browser"
 
 vim.cmd [[
 	nnoremap <leader>pf <cmd>Telescope find_files<cr>
-	nnoremap <leader>gi <cmd>Telescope git_files<cr>
 	nnoremap <leader>pg <cmd>Telescope live_grep<cr>
 	nnoremap <leader>pb <cmd>Telescope buffers<cr>
 	nnoremap <leader>pe <cmd>Telescope diagnostics<cr>
