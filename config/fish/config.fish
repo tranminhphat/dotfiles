@@ -11,6 +11,7 @@ alias g='git'
 alias vi='nvim'
 alias gst='git status'
 alias gad='git add .'
+alias gp= 'git push'
 
 # Git
 function glog
