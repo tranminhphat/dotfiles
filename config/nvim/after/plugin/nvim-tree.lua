@@ -19,6 +19,9 @@ require("nvim-tree").setup({
   filters = {
     custom = {"node_modules"}
   },
+  git = {
+    enable = false,
+  },
 })
 
 vim.cmd [[
