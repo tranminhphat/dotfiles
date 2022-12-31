@@ -21,7 +21,14 @@ return require('packer').startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
   use 'chriskempson/base16-vim'
-  use 'tomasiser/vim-code-dark'
+  use {
+    'petertriho/nvim-scrollbar',
+    config = function()
+      require('scrollbar').setup()
+    end
+  }
+  use 'neanias/everforest-nvim'
+  
   -- Vim enhancements
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
@@ -37,9 +44,9 @@ return require('packer').startup(function(use)
   -- Git
   use 'tpope/vim-fugitive'
   use {
-  'lewis6991/gitsigns.nvim',
-  config = function()
-    require('gitsigns').setup()
-  end
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
   }
 end)

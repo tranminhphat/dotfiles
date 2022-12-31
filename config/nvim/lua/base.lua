@@ -1,7 +1,6 @@
 local set = vim.opt
 local cmd = vim.cmd
 -- cmd('let base16colorspace=256')
-cmd('colorscheme codedark')
 cmd("syntax on")
 cmd("set noshowmode")
 cmd("set showcmd")
