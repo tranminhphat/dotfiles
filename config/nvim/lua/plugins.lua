@@ -17,17 +17,17 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind-nvim'
   -- GUI
-  use 'itchyny/lightline.vim'
+  use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
   use 'chriskempson/base16-vim'
+  use 'sainnhe/everforest'
   use {
     'petertriho/nvim-scrollbar',
     config = function()
       require('scrollbar').setup()
     end
   }
-  use 'neanias/everforest-nvim'
   
   -- Vim enhancements
   use 'tpope/vim-repeat'
@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
   use 'andymass/vim-matchup'
   use 'jiangmiao/auto-pairs'
   use 'vim-scripts/ReplaceWithRegister'
+
   -- Git
   use 'tpope/vim-fugitive'
   use {
