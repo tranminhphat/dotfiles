@@ -9,6 +9,14 @@
     "command": "workbench.action.navigateRight"
   },
   {
+    "key": "ctrl+cmd+k",
+    "command": "workbench.action.navigateUp"
+ },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
@@ -44,21 +52,13 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+cmd+b",
+    "key": "shift+cmd+b",
     "command": "bookmarksExplorer.focus"
   },
   {
     "key": "ctrl+cmd+.",
     "command": "bookmarks.toggle",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+cmd+n",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    "key": "ctrl+cmd+p",
-    "command": "workbench.action.previousEditor"
   },
   {
     "key": "tab",
@@ -70,4 +70,43 @@
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
+  {
+    "key": "shift+cmd+r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "f2",
+    "command": "-editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "ctrl+cmd+n",
+    "command": "bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+l",
+    "command": "-bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+p",
+    "command": "bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  }
 ]
