@@ -1,9 +1,10 @@
 local set = vim.opt
 local cmd = vim.cmd
--- cmd('let base16colorspace=256')
+cmd('let base16colorspace=256')
 cmd("syntax on")
 cmd("set noshowmode")
 cmd("set showcmd")
+cmd("colorscheme base16-gruvbox-dark-hard")
 
 set.termguicolors = true
 

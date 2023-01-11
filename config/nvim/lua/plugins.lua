@@ -1,10 +1,8 @@
-vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
   -- Fuzzy finder
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-	use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = {{'nvim-lua/plenary.nvim'}}}
-  use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'ibhagwan/fzf-lua'
+
   -- LSP config
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
@@ -16,12 +14,13 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind-nvim'
+
   -- GUI
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
   use 'chriskempson/base16-vim'
-  use 'sainnhe/everforest'
   use {
     'petertriho/nvim-scrollbar',
     config = function()
