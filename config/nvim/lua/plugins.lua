@@ -1,5 +1,5 @@
 return require('packer').startup(function(use)
-	use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim'
   -- Fuzzy finder
   use 'ibhagwan/fzf-lua'
 
@@ -16,17 +16,18 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'
 
   -- GUI
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use 'nvim-lualine/lualine.nvim'
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
-  use 'chriskempson/base16-vim'
+  use 'nvim-lualine/lualine.nvim'
+  use 'RRethy/nvim-base16'
   use {
     'petertriho/nvim-scrollbar',
     config = function()
       require('scrollbar').setup()
-    end
+     end
   }
+
   
   -- Vim enhancements
   use 'tpope/vim-repeat'
