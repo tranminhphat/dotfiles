@@ -1,11 +1,12 @@
 local set = vim.opt
 local cmd = vim.cmd
+local lsp = vim.lsp
 cmd('let base16colorspace=256')
 cmd('set termguicolors')
 cmd("syntax on")
 cmd("set noshowmode")
 cmd("set showcmd")
-cmd("colorscheme base16-gruvbox-dark-hard")
+cmd("colorscheme base16-ayu-dark")
 
 set.number = true
 set.relativenumber = true
@@ -35,5 +36,10 @@ set.cursorline = true
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',
   command = "set nopaste"
+})
+
+-- Change border of documentation hover window, See https://github.com/neovim/neovim/pull/13998.
+lsp.handlers["textDocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
+  border = "rounded",
 })
 
