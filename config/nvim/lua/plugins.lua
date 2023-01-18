@@ -21,14 +21,7 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
   use 'RRethy/nvim-base16'
-  use {
-    'petertriho/nvim-scrollbar',
-    config = function()
-      require('scrollbar').setup()
-     end
-  }
 
-  
   -- Vim enhancements
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
