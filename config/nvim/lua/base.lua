@@ -6,7 +6,7 @@ cmd('set termguicolors')
 cmd("syntax on")
 cmd("set noshowmode")
 cmd("set showcmd")
-cmd("colorscheme base16-ayu-dark")
+cmd("colorscheme base16-gruvbox-dark-hard")
 
 set.number = true
 set.relativenumber = true
