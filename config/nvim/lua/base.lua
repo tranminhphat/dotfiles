@@ -43,3 +43,4 @@ lsp.handlers["textDocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
   border = "rounded",
 })
 
+-- Test comment
