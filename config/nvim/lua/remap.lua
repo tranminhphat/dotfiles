@@ -21,6 +21,8 @@ map.set('n', '<leader>tc', ':tabclose<cr>')
 map.set('n', '<S-Tab>', ':bp<Return>')
 map.set('n', '<Tab>', ':bn<Return>')
 map.set('n', '<leader>q', '<Plug>Kwbd')
+map.set('n', '<leader>ca', ':w | %bd | e#<Return>')
+
 
 -- Windows
 -- Split window

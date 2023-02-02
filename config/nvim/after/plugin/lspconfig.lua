@@ -32,7 +32,7 @@ local lsp_flags = {
 require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
-    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.tsx" },
     cmd = { "typescript-language-server", "--stdio" }
 }
 require('lspconfig')['bashls'].setup{
