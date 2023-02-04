@@ -50,11 +50,16 @@ require'lspconfig'.rust_analyzer.setup{
         allFeatures = true,
       },
       completion = {
-	postfix = {
-	  enable = false,
-	},
+        postfix = {
+          enable = false,
+        },
       },
     },
   },
 }
-require'lspconfig'.eslint.setup{}
+require('lspconfig').eslint.setup{}
+require('lspconfig').solargraph.setup{
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
+

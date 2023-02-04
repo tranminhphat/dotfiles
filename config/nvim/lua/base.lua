@@ -10,17 +10,14 @@ cmd("colorscheme base16-gruvbox-dark-hard")
 
 set.number = true
 set.relativenumber = true
-
 set.tabstop= 2
 set.softtabstop= 2
 set.shiftwidth= 2
 set.expandtab = true
-
 set.swapfile = false
 set.backup = false
 set.incsearch = true
 set.hlsearch = true
-
 set.smartcase = true
 set.autoindent = true
 set.smartindent = true
