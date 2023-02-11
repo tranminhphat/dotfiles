@@ -3,4 +3,5 @@ vim.cmd [[
   nnoremap <leader>pb <cmd>FzfLua buffers<cr>
   nnoremap <leader>pg <cmd>FzfLua live_grep<cr>
   nnoremap <leader>pw <cmd>FzfLua grep_cword<cr>
+  nnoremap <leader>gr <cmd>FzfLua lsp_references<cr>
 ]]
