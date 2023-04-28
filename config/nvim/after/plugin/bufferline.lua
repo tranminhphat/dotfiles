@@ -1,19 +1,18 @@
-require("bufferline").setup{
+require("bufferline").setup({
   options = {
-    close_icon = '',
+    color_icons = true,
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    unique_name = true,
   },
-  highlights = {
-    buffer_selected = {
-      fg = '#fe8019',
-    },
+   highlights = {
     background = {
-      fg = '#fbf1c7',
+      fg = '#b0b2b1',
     },
-    close_button = {
-      fg = '#fbf1c7',
+    buffer_selected = {
+      fg = '#de935f',
+      bold = true,
+      italic = false,
     },
-    close_button_selected = {
-      fg = '#fe8019',
-    },
-  }
-}
+  },
+})

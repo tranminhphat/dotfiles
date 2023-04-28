@@ -25,7 +25,6 @@ require("nvim-tree").setup({
 })
 
 vim.cmd [[
-	nnoremap <leader>tt <cmd>NvimTreeToggle<cr>
-  nnoremap <leader>tf <cmd>NvimTreeFindFile<cr>
-  nnoremap <leader>tc <cmd>NvimTreeCollapse<cr>
+	nnoremap <C-p> <cmd>NvimTreeToggle<cr>
+  nnoremap <C-f> <cmd>NvimTreeFindFile<cr>
 ]]

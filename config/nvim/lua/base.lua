@@ -5,8 +5,10 @@ cmd('let base16colorspace=256')
 cmd('set termguicolors')
 cmd("syntax on")
 cmd("set noshowmode")
+cmd("set noundofile")
 cmd("set showcmd")
-cmd("colorscheme base16-gruvbox-dark-hard")
+cmd("set nowrap")
+cmd("colorscheme base16-tomorrow-night")
 
 set.number = true
 set.relativenumber = true
@@ -40,3 +42,19 @@ lsp.handlers["textDocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
   border = "rounded",
 })
 
+vim.diagnostic.config {     
+    float = { border = "rounded" }, 
+}
+
+vim.cmd [[
+  function! g:FckThatMatchParen ()
+      if exists(":NoMatchParen")
+          :NoMatchParen
+      endif
+  endfunction
+
+  augroup plugin_initialize
+      autocmd!
+      autocmd VimEnter * call FckThatMatchParen()
+  augroup END
+]]

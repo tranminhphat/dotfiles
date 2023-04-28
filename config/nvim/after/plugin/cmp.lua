@@ -1,6 +1,5 @@
-local status, cmp = pcall(require, "cmp")
-if (not status) then return end
-local lspkind = require 'lspkind'
+local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
   window = {
@@ -30,6 +29,24 @@ cmp.setup({
     format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
   }
 })
+
+  -- Set up lspconfig.
+  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+  require('lspconfig')['tsserver'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['solargraph'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['rust_analyzer'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['bashls'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['eslint'].setup {
+    capabilities = capabilities
+  }
 
 vim.cmd [[
   set completeopt=menuone,noinsert,noselect

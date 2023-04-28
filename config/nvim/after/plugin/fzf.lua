@@ -1,7 +1,7 @@
 vim.cmd [[
-  nnoremap <leader>pf <cmd>FzfLua files<cr>
-  nnoremap <leader>pb <cmd>FzfLua buffers<cr>
-  nnoremap <leader>pg <cmd>FzfLua live_grep<cr>
-  nnoremap <leader>pw <cmd>FzfLua grep_cword<cr>
-  nnoremap <leader>gr <cmd>FzfLua lsp_references<cr>
+  nnoremap <leader>ff <cmd>FzfLua files<cr>
+  nnoremap <leader>fb <cmd>FzfLua buffers<cr>
+  nnoremap <leader>fg <cmd>FzfLua live_grep<cr>
+  nnoremap <leader>fw <cmd>FzfLua grep_cword<cr>
+  nnoremap gr <cmd>FzfLua lsp_references<cr>
 ]]
