@@ -1,7 +1,11 @@
-vim.cmd [[
-  nnoremap <leader>ff <cmd>FzfLua files<cr>
-  nnoremap <leader>fb <cmd>FzfLua buffers<cr>
-  nnoremap <leader>fg <cmd>FzfLua live_grep<cr>
-  nnoremap <leader>fw <cmd>FzfLua grep_cword<cr>
-  nnoremap gr <cmd>FzfLua lsp_references<cr>
-]]
+local FzfLua = require('fzf-lua')
+local map = vim.keymap
+
+map.set("n", "<leader>pf", "<cmd>FzfLua files<cr>", { silent = true })
+map.set("n", "<leader>pb", "<cmd>FzfLua buffers<cr>", { silent = true })
+map.set("n", "<leader>ps", "<cmd>FzfLua lgrep_curbuf<cr>", { silent = true })
+map.set("n", "<leader>pS", "<cmd>FzfLua live_grep<cr>", { silent = true })
+map.set("n", "<leader>pw", "<cmd>FzfLua grep_cword<cr>", { silent = true })
+map.set("n", "<leader>pg", "<cmd>FzfLua git_files<cr>", { silent = true })
+map.set("n", "gr", "<cmd>FzfLua lsp_references<cr>", { silent = true })
+

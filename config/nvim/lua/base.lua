@@ -8,7 +8,7 @@ cmd("set noshowmode")
 cmd("set noundofile")
 cmd("set showcmd")
 cmd("set nowrap")
-cmd("colorscheme base16-tomorrow-night")
+cmd("colorscheme base16-gruvbox-dark-hard")
 
 set.number = true
 set.relativenumber = true

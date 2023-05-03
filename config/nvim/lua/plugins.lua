@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind-nvim'
+  use 'glepnir/lspsaga.nvim'
 
   -- GUI
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -21,7 +22,6 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
   use 'RRethy/nvim-base16'
-  use  {'akinsho/bufferline.nvim', tag = "*"}
 
   -- Vim enhancements
   use 'tpope/vim-repeat'
@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
   use 'andymass/vim-matchup'
   use 'jiangmiao/auto-pairs'
   use 'vim-scripts/ReplaceWithRegister'
+  use 'github/copilot.vim'
 
   -- Git
   use 'tpope/vim-fugitive'

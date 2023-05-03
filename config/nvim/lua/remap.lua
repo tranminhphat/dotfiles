@@ -23,7 +23,6 @@ map.set('n', '<Tab>', ':bn<Return>')
 map.set('n', '<leader>q', '<Plug>Kwbd')
 map.set('n', '<leader>ca', ':w | %bd | e#<Return>')
 
-
 -- Windows
 -- Split window
 map.set('n', '<leader>ss', ':split<Return><C-w>w')
@@ -39,3 +38,9 @@ map.set('n', "<C-d>", "<C-d>zz")
 map.set('n', "<C-u>", "<C-u>zz")
 map.set('n', "n", "nzzzv")
 map.set('n', "N", "Nzzzv")
+
+-- Copy and paste
+map.set('x', "<leader>p", "\"_dP")
+map.set('n', "<leader>y", "\"+y")
+map.set('v', "<leader>y", "\"+y")
+map.set('n', "<leader>Y", "\"+Y")
