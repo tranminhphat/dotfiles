@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-lualine/lualine.nvim'
   use 'RRethy/nvim-base16'
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Vim enhancements
   use 'tpope/vim-repeat'
@@ -33,17 +34,37 @@ return require('packer').startup(function(use)
   use 'kana/vim-textobj-entire'
   use 'justinmk/vim-sneak'
   use 'andymass/vim-matchup'
-  use 'jiangmiao/auto-pairs'
+  use {
+	  "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
   use 'vim-scripts/ReplaceWithRegister'
-  use 'github/copilot.vim'
+  use {
+  "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  event = "InsertEnter",
+  config = function()
+    require("copilot").setup({
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    })
+  end,
+}
+  use {
+  "zbirenbaum/copilot-cmp",
+  after = { "copilot.lua" },
+  config = function ()
+    require("copilot_cmp").setup()
+  end
+}
 
   -- Git
-  use 'tpope/vim-fugitive'
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
       require('gitsigns').setup()
     end
   }
+  use { 'tpope/vim-fugitive' }
 end)
 

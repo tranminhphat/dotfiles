@@ -36,8 +36,8 @@ saga.setup({
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<leader>sb', "<cmd>Lspsaga show_buf_diagnostics<CR>")
-vim.keymap.set("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
+vim.keymap.set('n', '<leader>lq', "<cmd>Lspsaga show_buf_diagnostics<CR>")
+vim.keymap.set("n", '<leader>le', "<cmd>Lspsaga show_line_diagnostics<CR>")
 vim.keymap.set('n', '[d', "<cmd>Lspsaga diagnostic_jump_prev<CR>")
 vim.keymap.set('n', ']d', "<cmd>Lspsaga diagnostic_jump_next<CR>")
 
@@ -54,8 +54,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     local opts = { buffer = ev.buf, noremap = true, silent = true }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    vim.keymap.set('n', 'gd', "<cmd>Lspsaga goto_definition<CR>", opts)
+    -- vim.keymap.set('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+    vim.keymap.set('n', 'gf', "<Cmd>Lspsaga lsp_finder<CR>", opts)
+    vim.keymap.set('n', 'gd', "<Cmd>Lspsaga goto_definition<CR>", opts)
     vim.keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
     vim.keymap.set('n', 'gt', '<cmd>Lspsaga peek_type_definition<CR>', opts)
     vim.keymap.set('n', 'gh', '<Cmd>Lspsaga hover_doc<CR>', opts)
